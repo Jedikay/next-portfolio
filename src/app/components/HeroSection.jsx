@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center">
           <h1 className="mb-4 text-4xl font-extrabold text-white lg:text-6xl">
-            Hello, I&apos;m Karyn
+            Hello, I&apos;m Kadyn
           </h1>
           <p className="text-[#adb7be text-lg lg:text-xl">
             I am very good web developer
