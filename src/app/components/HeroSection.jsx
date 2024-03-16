@@ -9,8 +9,8 @@ const HeroSection = () => {
             <h1 className="mb-4 text-4xl font-extrabold text-white lg:text-6xl">Hello, I&apos;m Kadyn</h1>
             <p className="text-[#adb7be text-lg lg:text-xl">I am a web developer.</p>
             </div>
-            <div className="col-span-5">
-            <div className="squared-full bg-[#181818] w-[500px] h-[500px] relative">
+            <div className="col-span-5 overflow-hidden rounded-full">
+            <div className="bg-[#181818] w-[500px] h-[500px] relative">
             <Image
             src="/images/jedikay.jpg"
             alt="jedikay image"
