@@ -5,50 +5,52 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-7 text-center place-self-center sm:text-left">
-          <h1 className="mb-4 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Hello, I&apos;m{" "}
+    <section className="w-full max-w-5xl py-8">
+      <div className="flex w-full flex-col items-center justify-center md:flex-row md:justify-between">
+        <div className="w-full text-left md:w-auto md:flex-1">
+          <h1 className="mb-4 w-full text-3xl font-extrabold text-white md:text-4xl lg:text-6xl">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+              Hello, I&apos;m
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
-                "Kadyn",
+                'Kadyn',
                 1000,
-                "a Web Developer",
+                'a Frontend Developer',
                 1000,
-                "a Front End Developer",
+                'a Backend Developer',
                 1000,
-                "Self-Taught",
+                'a Fullstack Developer',
                 1000,
+                'a Web Developer',
+                5000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#adb7be text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#adb7be mb-6 text-base md:text-lg lg:text-xl">
             I am a web developer and a mom 👩🏻‍💻👩🏻‍🍼
           </p>
           <div>
-            <button className="w-full px-6 py-3 mr-4 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 sm:w-fit hover:bg-slate-200">
+            <button className="mr-4 w-full rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-6 py-3 text-white hover:bg-slate-200 md:w-fit">
               Hire Me
             </button>
-            <button className="w-full px-1 py-1 mt-3 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 sm:w-fit hover:bg-slate-800">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+            <button className="mt-3 w-full rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1 text-white hover:bg-slate-800 md:w-fit">
+              <span className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800">
                 Download Resume
               </span>
             </button>
           </div>
         </div>
-        <div className="col-span-5 mt-4 place-self-center lg:mt-0">
-          <div className="bg-[#181818] w-[250px] h-[250px] relative overflow-hidden rounded-full">
+        <div className="mt-10 w-[250px] md:mt-0">
+          <div className="relative h-[250px] w-[250px] overflow-hidden rounded-full bg-[#181818]">
             <Image
               src="/images/jedikay.jpg"
               alt="jedikay image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
               width={300}
               height={300}
             />
@@ -56,7 +58,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default HeroSection;
