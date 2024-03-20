@@ -31,7 +31,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#adb7be mb-6 text-base md:text-lg lg:text-xl">
+          <p className="text-[#adb7be mb-6 text-base md:text-lg lg:text-xl w-full md:w-4/5">
             I understand that pixels have personalities, and user interfaces
             whisper secrets. My rural roots ground me, but my digital wings
             soar. Hire me, and you&apos;ll get a dash of Southern charm, a pinch
