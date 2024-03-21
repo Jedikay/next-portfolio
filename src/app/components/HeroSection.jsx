@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <section className="w-full max-w-5xl py-8">
-      <div className="flex flex-col items-center justify-center w-full md:flex-row md:justify-between">
-        <div className="w-full text-left md:w-auto md:flex-1">
-          <h1 className="w-full mb-4 text-3xl font-extrabold text-white md:text-4xl lg:text-6xl">
+    <section className="w-full max-w-5xl pb-16">
+      <div className="flex flex-col-reverse items-center justify-center w-full md:flex-row md:justify-between">
+        <div className="w-full text-left md:flex-1">
+          <h1 className="w-full mb-4 text-4xl font-extrabold text-white lg:text-6xl">
             <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text">
               Hello, I&apos;m
             </span>
@@ -21,10 +20,10 @@ const HeroSection = () => {
                 1000,
                 "a Web Developer",
                 1000,
-                "an UI/UX Engineer",
+                "a UI/UX Engineer",
                 1000,
                 "Kadyn",
-                5000,
+                3000,
               ]}
               wrapper="span"
               speed={50}
@@ -48,17 +47,13 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className="mt-10 w-[250px] md:mt-0">
-          <div className="relative h-[250px] w-[250px] overflow-hidden rounded-full bg-[#181818]">
-            <Image
-              src="/images/jedikay.jpg"
-              alt="jedikay image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-              width={300}
-              height={300}
-            />
-          </div>
-        </div>
+        <picture className="mb-10 md:mb-0">
+          <img
+            src="/images/jedikay.jpg"
+            alt="jedikay image"
+            className="w-64 rounded-full"
+          />
+        </picture>
       </div>
     </section>
   );
