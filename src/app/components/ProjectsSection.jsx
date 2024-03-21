@@ -9,7 +9,7 @@ const projectsData = [
     title: "JavaScript Calculator",
     description: "Calculator built using JavaScript.",
     image: "/images/projects/calc.png",
-    tag: ["All, JS"],
+    tag: ["JS, Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -18,7 +18,7 @@ const projectsData = [
     title: "JavaScript Mole Game",
     description: "Feed a mole game built using Javascript.",
     image: "/images/projects/molegame.png",
-    tag: ["All, JS"],
+    tag: ["JS, Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -36,14 +36,14 @@ const projectsData = [
     title: "NextJs Portfolio",
     description: "Portfolio built using NextJs.",
     image: "/images/projects/portfolio.png",
-    tag: ["All"],
+    tag: ["React, Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Web");
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -61,8 +61,8 @@ const ProjectsSection = () => {
       <div className="flex flex-row items-center justify-center gap-2 py-6 text-white">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
+          name="Web"
+          isSelected={tag === "Web"}
         />
         <ProjectTag
           onClick={handleTagChange}
@@ -75,17 +75,19 @@ const ProjectsSection = () => {
           isSelected={tag === "React"}
         />
       </div>
-      <div>
-        {filterProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
-        ))}
+      <div className="relative w-full overflow-x-auto h-[350px] md:h-[420px] rounded-3xl">
+        <div className="absolute top-0 z-50 flex flex-row items-center gap-4 jusity-center">
+          {filterProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
