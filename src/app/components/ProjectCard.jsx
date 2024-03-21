@@ -4,29 +4,33 @@ import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
-    <div>
+    <div className="w-96 rounded-3xl group">
       <div
-        className="relative h-52 md:h-72 rounded-t-xl group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+        className="relative h-52 md:h-72 rounded-t-3xl"
+        style={{
+          background: `url(${imgUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
+        <div className="absolute top-0 left-0 items-center justify-center hidden w-full h-full transition-all duration-500 bg-opacity-75 overlay bg-neutral-900 group-hover:flex rounded-t-3xl">
           <Link
             href={gitUrl}
-            className="relative border-2 h-14 w-14 m-2 rounded-full border-[#adb7be] hover:border-white group/link"
+            className="relative m-2 border-2 rounded-full h-14 w-14 border-slate-400 hover:border-white text-slate-400 hover:text-white"
           >
-            <CodeBracketIcon className="h-10 w-10 text-[#adb7be] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
+            <CodeBracketIcon className="absolute w-10 h-10 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
           </Link>
           <Link
             href={previewUrl}
-            className="relative border-2 h-14 w-14 rounded-full border-[#adb7be] hover:border-white group/link"
+            className="relative border-2 rounded-full h-14 w-14 border-slate-400 hover:border-white text-slate-400 hover:text-white"
           >
-            <EyeIcon className="h-10 w-10 text-[#adb7be] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
+            <EyeIcon className="absolute w-10 h-10 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2 " />
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
+      <div className="px-4 py-6 text-slate-200 rounded-b-3xl bg-neutral-900">
         <h5 className="mb-2 text-xl font-semibold">{title}</h5>
-        <p className="text-[#adb7be]">{description}</p>
+        <p className="text-slate-200">{description}</p>
       </div>
     </div>
   );
