@@ -14,7 +14,7 @@ const Footer = () => {
             href="https://greatidea.dev/"
             target="_blank"
           >
-            Great Idea Development
+            GreatIdea.dev
           </a>
         </p>
         <p className="text-xs text-slate-600">
