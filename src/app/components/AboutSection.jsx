@@ -48,7 +48,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="w-full max-w-5xl my-10 text-white">
+    <section id="about" className="w-full max-w-5xl my-10 text-white">
       <div className="flex flex-col items-center justify-center gap-10 md:flex-row">
         <picture className="w-full md:w-1/3 max-w-80">
           <img

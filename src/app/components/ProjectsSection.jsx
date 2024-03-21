@@ -54,7 +54,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <>
+    <section id="projects">
       <h2 className="mt-4 text-4xl font-bold text-center text-purple-500">
         My Projects
       </h2>
@@ -89,7 +89,7 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
