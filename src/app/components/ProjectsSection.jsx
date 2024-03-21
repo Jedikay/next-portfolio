@@ -6,24 +6,15 @@ import ProjectTag from "./ProjectTag";
 const projectsData = [
   {
     id: 1,
-    title: "JavaScript Calculator",
-    description: "Calculator built using JavaScript.",
-    image: "/images/projects/calc.png",
-    tag: ["JS", "Web"],
+    title: "NextJs Portfolio",
+    description: "Portfolio built using NextJs.",
+    image: "/images/projects/portfolio.png",
+    tag: ["React", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "JavaScript Mole Game",
-    description: "Feed a mole game built using Javascript.",
-    image: "/images/projects/molegame.png",
-    tag: ["JS", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
     title: "React To Do List",
     description: "To Do list built using React",
     image: "/images/projects/todo.png",
@@ -32,11 +23,20 @@ const projectsData = [
     previewUrl: "/",
   },
   {
+    id: 3,
+    title: "JavaScript Mole Game",
+    description: "Feed a mole game built using Javascript.",
+    image: "/images/projects/molegame.png",
+    tag: ["JS", "Web"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
     id: 4,
-    title: "NextJs Portfolio",
-    description: "Portfolio built using NextJs.",
-    image: "/images/projects/portfolio.png",
-    tag: ["React", "Web"],
+    title: "JavaScript Calculator",
+    description: "Calculator built using JavaScript.",
+    image: "/images/projects/calc.png",
+    tag: ["JS", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -66,13 +66,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="JS"
-          isSelected={tag === "JS"}
+          name="React"
+          isSelected={tag === "React"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="React"
-          isSelected={tag === "React"}
+          name="JS"
+          isSelected={tag === "JS"}
         />
       </div>
       <div className="relative w-full overflow-x-auto h-[350px] md:h-[420px] rounded-3xl">

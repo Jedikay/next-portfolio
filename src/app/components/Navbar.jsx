@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   {
@@ -21,18 +19,14 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-
   return (
     <div className="relative w-full">
       <nav
         className={
-          !navbarOpen
-            ? "z-10 flex h-24 w-full flex-row items-center justify-between bg-neutral-900 bg-opacity-70 px-8"
-            : "hidden"
+          "flex h-24 w-full flex-row items-center justify-between bg-neutral-900 bg-opacity-70 px-10"
         }
       >
-        <div className="flex flex-wrap items-center justify-between w-full h-full px-4 py-2">
+        <div className="flex flex-wrap items-center justify-between w-full h-full">
           <Link href={"/"}>
             <picture>
               <img
@@ -42,25 +36,8 @@ const Navbar = () => {
               />
             </picture>
           </Link>
-          <div className="block mobile-menu md:hidden">
-            {!navbarOpen ? (
-              <button
-                onClick={() => setNavbarOpen(true)}
-                className="flex items-center px-3 py-2 border rounded border-slate-300 text-slate-300 hover:border-purple-500 hover:text-purple-500"
-              >
-                <Bars3Icon className="w-5 h-5" />
-              </button>
-            ) : (
-              <button
-                onClick={() => setNavbarOpen(false)}
-                className="flex items-center px-3 py-2 border rounded border-slate-300 text-slate-300 hover:border-purple-500 hover:text-purple-500"
-              >
-                <XMarkIcon className="w-5 h-5" />
-              </button>
-            )}
-          </div>
-          <div className="hidden menu md:block md:w-auto" id="Navbar">
-            <ul className="flex p-4 mt-0 md:flex-row md:space-x-8 md:p-0">
+          <div className="flex" id="Navbar">
+            <ul className="flex flex-row gap-8">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink href={link.path} title={link.title} />

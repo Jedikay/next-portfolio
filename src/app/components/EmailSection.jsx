@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/images/projects/github.svg";
-import LinkedinIcon from "../../../public/images/projects/linkedin.svg";
-import Link from "next/link";
-import Image from "next/image";
+import GithubIcon from "./icons/GithubIcon";
+import LinkedInIcon from "./icons/LinkedInIcon";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -40,11 +38,10 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="relative grid gap-4 py-24 my-12 md:grid-cols-2 md:my-12"
+      className="flex flex-col items-center justify-center w-full gap-8 my-10 lg:items-start lg:flex-row"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div className="z-10">
-        <h5 className="my-2 text-xl font-bold text-purple-500">
+      <div className="w-full max-w-lg lg:w-1/2">
+        <h5 className="my-2 text-3xl font-bold text-purple-500">
           Let&apos;s conjure a web development spell that will enchant browsers
           and bewitch users!
         </h5>
@@ -55,19 +52,25 @@ const EmailSection = () => {
           as possible!
         </p>
         <div className="flex flex-row gap-2 socials">
-          <Link href="github.com">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
+          <a
+            href="https://github.com/Jedikay"
+            target="_blank"
+            className="w-12 curor-pointer text-slate-200 hover:text-purple-500"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kadyn-stafford-784b912a1/"
+            target="_blank"
+            className="w-12 cursor-pointer text-slate-200 hover:text-purple-500"
+          >
+            <LinkedInIcon />
+          </a>
         </div>
       </div>
-      <div>
+      <div className="w-full max-w-md lg:flex-1">
         {emailSubmitted ? (
-          <p className="mt-2 text-sm text-green-500">
-            Email sent successfully!
-          </p>
+          <p className="text-sm text-green-500">Email sent successfully!</p>
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
@@ -82,8 +85,8 @@ const EmailSection = () => {
                 type="email"
                 id="email"
                 required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="your-email@google.com"
+                className="bg-zinc-900 border border-zinc-700 placeholder-zinc-400 text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="you@example.com"
               />
             </div>
             <div className="mb-6">
@@ -98,7 +101,7 @@ const EmailSection = () => {
                 type="text"
                 id="subject"
                 required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="bg-zinc-900 border border-zinc-700 placeholder-zinc-400 text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Just saying hello"
               />
             </div>
@@ -112,7 +115,7 @@ const EmailSection = () => {
               <textarea
                 name="message"
                 id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="bg-zinc-900 border border-zinc-700 placeholder-zinc-400 text-gray-100 text-sm rounded-lg block w-full p-2.5 min-h-28"
                 placeholder="Let's talk about..."
               />
             </div>
