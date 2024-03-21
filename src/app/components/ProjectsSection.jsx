@@ -76,7 +76,7 @@ const ProjectsSection = () => {
         />
       </div>
       <div className="relative w-full overflow-x-auto h-[350px] md:h-[420px] rounded-3xl">
-        <div className="absolute top-0 z-50 flex flex-row items-center gap-4 jusity-center">
+        <div className="absolute top-0 z-50 flex flex-row items-center justify-center gap-4">
           {filterProjects.map((project) => (
             <ProjectCard
               key={project.id}
