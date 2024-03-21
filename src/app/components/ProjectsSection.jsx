@@ -10,8 +10,8 @@ const projectsData = [
     description: "Portfolio built using NextJs.",
     image: "/images/projects/portfolio.png",
     tag: ["React", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Jedikay/next-portfolio",
+    previewUrl: "https://jedikay.com/",
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const projectsData = [
     description: "To Do list built using React",
     image: "/images/projects/todo.png",
     tag: ["Web", "React"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Jedikay/react-todo-list",
+    previewUrl: "https://todo.jedikay.com/",
   },
   {
     id: 3,
@@ -28,8 +28,8 @@ const projectsData = [
     description: "Feed a mole game built using Javascript.",
     image: "/images/projects/molegame.png",
     tag: ["JS", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Jedikay/js-mole-game",
+    previewUrl: "https://molegame.jedikay.com/",
   },
   {
     id: 4,
@@ -37,8 +37,8 @@ const projectsData = [
     description: "Calculator built using JavaScript.",
     image: "/images/projects/calc.png",
     tag: ["JS", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Jedikay/js-calculator",
+    previewUrl: "https://calc.jedikay.com/",
   },
 ];
 
