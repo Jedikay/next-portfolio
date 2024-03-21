@@ -4,36 +4,31 @@ import GithubIcon from "./icons/GithubIcon";
 import LinkedInIcon from "./icons/LinkedInIcon";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    const options = {
+    const formData = new FormData(e.currentTarget);
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
-
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      body: JSON.stringify({
+        access_key: "63676fde-5b17-4e19-9bdc-71a5c2ad7951",
+        Website: "jedikay.com",
+        Name: formData.get("name"),
+        Email: formData.get("email"),
+        Subject: formData.get("subject"),
+        Message: formData.get("message"),
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      setEmailSent(true);
     }
-  };
+  }
 
   return (
     <section
@@ -55,7 +50,7 @@ const EmailSection = () => {
           <a
             href="https://github.com/Jedikay"
             target="_blank"
-            className="w-12 curor-pointer text-slate-200 hover:text-purple-500"
+            className="w-12 cursor-pointer text-slate-200 hover:text-purple-500"
           >
             <GithubIcon />
           </a>
@@ -69,16 +64,32 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="w-full max-w-md lg:flex-1">
-        {emailSubmitted ? (
+        {emailSent ? (
           <p className="text-sm text-green-500">Email sent successfully!</p>
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
+                htmlFor="name"
+                className="block mb-2 text-sm font-medium text-white"
+              >
+                Full Name:
+              </label>
+              <input
+                name="name"
+                type="text"
+                id="name"
+                required
+                className="bg-zinc-900 border border-zinc-700 placeholder-zinc-400 text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="Jane Doe"
+              />
+            </div>
+            <div className="mb-6">
+              <label
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-white"
               >
-                Your email
+                Email Address:
               </label>
               <input
                 name="email"
@@ -94,7 +105,7 @@ const EmailSection = () => {
                 htmlFor="subject"
                 className="block mb-2 text-sm font-medium text-white"
               >
-                Subject
+                Subject:
               </label>
               <input
                 name="subject"
@@ -110,7 +121,7 @@ const EmailSection = () => {
                 htmlFor="message"
                 className="block mb-2 text-sm font-medium text-white"
               >
-                Message
+                Message:
               </label>
               <textarea
                 name="message"
