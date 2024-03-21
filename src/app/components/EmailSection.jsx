@@ -60,7 +60,7 @@ const EmailSection = () => {
             <GithubIcon />
           </a>
           <a
-            href="https://www.linkedin.com/in/kadyn-stafford-784b912a1/"
+            href="https://www.linkedin.com/in/kadynstafford/"
             target="_blank"
             className="w-12 cursor-pointer text-slate-200 hover:text-purple-500"
           >
