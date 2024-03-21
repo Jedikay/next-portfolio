@@ -27,7 +27,7 @@ const projectsData = [
     title: "React To Do List",
     description: "To Do list built using React",
     image: "/images/projects/todo.png",
-    tag: ["All", "React"],
+    tag: ["Web", "React"],
     gitUrl: "/",
     previewUrl: "/",
   },
