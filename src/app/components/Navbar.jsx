@@ -37,7 +37,7 @@ const Navbar = () => {
             </picture>
           </Link>
           <div className="flex" id="Navbar">
-            <ul className="flex flex-row gap-8">
+            <ul className="flex flex-row gap-4 md:gap-8">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink href={link.path} title={link.title} />
