@@ -18,7 +18,7 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="pl-2 list-disc">
-        <li>NextJs</li>
+        <li>Next.js</li>
         <li>React</li>
         <li>Tailwind CSS</li>
         <li>JavaScript</li>
@@ -64,7 +64,7 @@ const AboutSection = () => {
             blend of roles and skills. My journey has taken me from the serene
             landscapes of rural Mississippi to the bustling digital world. As a
             web developer, I weave spells with JavaScript, Tailwind CSS, React,
-            and NextJs. User experience? I&apos;ve got it covered. I&apos;m a
+            and Next.js. User experience? I&apos;ve got it covered. I&apos;m a
             storyteller who crafts digital narratives. Let&apos;s create
             something extraordinary together!
           </p>
