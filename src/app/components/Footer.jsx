@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         </p>
         <p className="text-xs text-slate-600">
-          &copy; 2024 JediKay | All rights reserved.
+          &copy; 2024 Jedikay | All rights reserved.
         </p>
       </div>
     </footer>
