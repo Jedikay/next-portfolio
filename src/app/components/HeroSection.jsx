@@ -37,13 +37,20 @@ const HeroSection = () => {
             of gaming zeal, and a whole lot of code magic.
           </p>
           <div>
-            <button className="w-full px-6 py-3 mr-4 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 md:w-fit">
+            <a
+              href="#contact"
+              className="w-full px-6 py-3 mr-4 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 md:w-fit"
+            >
               Hire Me
-            </button>
+            </a>
             <button className="w-full px-1 py-1 mt-3 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 md:w-fit">
-              <span className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800">
+              <a
+                href="./kadyn-stafford-resume.pdf"
+                target="_blank"
+                className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800"
+              >
                 Download Resume
-              </span>
+              </a>
             </button>
           </div>
         </div>
