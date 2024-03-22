@@ -35,7 +35,7 @@ const projectsData = [
     id: 4,
     title: "JavaScript Calculator",
     description: "Calculator built using JavaScript.",
-    image: "/public/images/calc.png",
+    image: "/public/images/projects/calc.png",
     tag: ["JS", "Web"],
     gitUrl: "https://github.com/Jedikay/js-calculator",
     previewUrl: "https://calc.jedikay.com/",
