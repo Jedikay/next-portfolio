@@ -38,9 +38,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col w-full gap-1 md:gap-4 md:flex-row">
             <button className="w-full px-12 py-2 mt-3 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 md:w-fit">
-              <a href="/#contact" target="_blank">
-                Hire Me
-              </a>
+              <a href="/#contact">Hire Me</a>
             </button>
             <button className="w-full px-1 py-1 mt-3 text-white rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 md:w-fit">
               <a
