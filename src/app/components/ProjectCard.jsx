@@ -10,7 +10,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         style={{
           background: `url(${imgUrl})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
         }}
       >
         <div className="absolute top-0 left-0 items-center justify-center hidden w-full h-full transition-all duration-500 bg-opacity-75 overlay bg-neutral-900 group-hover:flex rounded-t-3xl">
